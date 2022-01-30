@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y apt-utils && \
 
 
 RUN mkdir /src && cd /src && \
-      url="https://github.com/LibreTime/libretime/archive/$LIBRE_V.tar.gz" && \
+      url="https://github.com/ahiska/libretime/archive/$LIBRE_V.tar.gz" && \
       file=$(curl $url | sed 's/.* href="//' | sed 's/">.*//') && \
       curl $file -o libretime.tar.gz && tar xzvf libretime.tar.gz
 
